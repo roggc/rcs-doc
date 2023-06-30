@@ -6,8 +6,12 @@ import { openInNewTab } from "./utils";
 import { useMediaQuery } from "react-responsive";
 import { FiMenu as FM } from "react-icons/fi";
 import { useSlice } from "./slices";
+import { useRef } from "react";
+import { useScrollToTop } from "./hooks";
 
 const Layout = () => {
+  const pageContentRef = useRef(null);
+  useScrollToTop(pageContentRef);
   const isDesktopOrTablet = useMediaQuery({ minWidth: 850 });
   const [isShownMobileLateralMenu, setIsShownMobileLateralMenu] = useSlice(
     "isShownMobileLateralMenu"
@@ -62,14 +66,14 @@ const Layout = () => {
           License
         </Link>
       </LateralMenu>
-      <PageContent>
+      <PageContent ref={pageContentRef}>
         <Outlet />
       </PageContent>
     </AppContainer>
   ) : (
     <MobileAppContainer>
       <Header />
-      <MobilePageContent>
+      <MobilePageContent ref={pageContentRef}>
         <MobileLateralMenu isShown={isShownMobileLateralMenu}>
           <Link
             to="installation"
