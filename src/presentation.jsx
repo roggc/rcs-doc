@@ -1,5 +1,5 @@
-import { FaReact } from "react-icons/fa";
-import { SiRedux } from "react-icons/si";
+import { FaReact as FR } from "react-icons/fa";
+import { SiRedux as SR } from "react-icons/si";
 import styled from "styled-components";
 import Card from "./card";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
@@ -69,5 +69,12 @@ const Title = styled.div`
 `;
 
 const P = styled.div``;
+
+const FaReact = styled(FR)`
+  color: blue;
+`;
+const SiRedux = styled(SR)`
+  color: blue;
+`;
 
 export default Presentation;

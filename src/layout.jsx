@@ -248,7 +248,7 @@ const MobilePageContent = styled.div`
 `;
 
 const LateralMenu = styled.div`
-  flex: 25%;
+  flex: 28%;
   overflow: auto;
   border-right: 2px solid red;
   padding: 20px 20px;
@@ -266,6 +266,7 @@ const PageContent = styled.div`
 const Link = styled(L)`
   text-decoration: none;
   display: block;
+  color: initial;
 `;
 
 const Title = styled(Link)`
@@ -277,6 +278,7 @@ const FaGithub = styled(FaGH)`
 `;
 const FaNpm = styled(FaNPM)`
   cursor: pointer;
+  color: red;
 `;
 
 const IconsContainer = styled.div`

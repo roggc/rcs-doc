@@ -10,7 +10,6 @@ p {
 }
 
 .active.navlink {
-  display: block;
   background-color: grey;
   border-radius: 5px;
   padding: 10px;
