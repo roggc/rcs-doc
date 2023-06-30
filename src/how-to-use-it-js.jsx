@@ -1,15 +1,16 @@
 import styled from "styled-components";
 import CB from "./code-block";
 import { useSlice } from "@slices";
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
 const HowToUseItJS = () => {
   const [, setIsShownMobileLateralMenu] = useSlice("isShownMobileLateralMenu");
   return (
     <Container onClick={() => setIsShownMobileLateralMenu(false)}>
-      <P>
-        You can define a Redux slice. The key point is to put a{" "}
-        <strong>reducers</strong> key in the object definition of the slice.
-      </P>
+      <ReactMarkdown>
+        You can define a Redux slice. The key point is to put a **`reducers`**
+        key in the object definition of the slice.
+      </ReactMarkdown>
       <CodeBlock>{`// slices.js
 import getHookAndProviderFromSlices from "react-context-slices";
 
@@ -25,10 +26,10 @@ export const { useSlice, Provider } = getHookAndProviderFromSlices({
     // rest of slices (either Redux or React Context slices)
   },
 });`}</CodeBlock>
-      <P>
-        This is how you would use it in a component with the{" "}
-        <strong>useSlice</strong> hook.
-      </P>
+      <ReactMarkdown>
+        This is how you would use it in a component with the **`useSlice`**
+        hook.
+      </ReactMarkdown>
       <CodeBlock>{`// app.jsx
 import { useSlice } from "./slices";
 
@@ -59,10 +60,10 @@ export const { useSlice, Provider } = getHookAndProviderFromSlices({
     // rest of slices (either Redux or React Context slices)
   },
 });`}</CodeBlock>
-      <P>
-        This is how you would use it in a component with the{" "}
-        <strong>useSlice</strong> hook.
-      </P>
+      <ReactMarkdown>
+        This is how you would use it in a component with the **`useSlice`**
+        hook.
+      </ReactMarkdown>
       <CodeBlock>{`// app.jsx
 import { useSlice } from "./slices";
 
@@ -80,7 +81,9 @@ const App = () => {
 };
 
 export default App;`}</CodeBlock>
-      <P>A React Context slice can also accept a reducer.</P>
+      <ReactMarkdown>
+        A React Context slice can also accept a **`reducer`**.
+      </ReactMarkdown>
       <CodeBlock>{`// slices.js
 import getHookAndProviderFromSlices from "react-context-slices";
 
@@ -101,10 +104,10 @@ export const { useSlice, Provider } = getHookAndProviderFromSlices({
     // rest of slices (either Redux or React Context slices)
   },
 });`}</CodeBlock>
-      <P>
-        This is how you would use it in a component with the{" "}
-        <strong>useSlice</strong> hook.
-      </P>
+      <ReactMarkdown>
+        This is how you would use it in a component with the **`useSlice`**
+        hook.
+      </ReactMarkdown>
       <CodeBlock>{`// app.jsx
 import { useSlice } from "./slices";
 
@@ -122,10 +125,10 @@ const App = () => {
 };
 
 export default App;`}</CodeBlock>
-      <P>
+      <ReactMarkdown>
         When using Redux slices, we can also pass a selector as a second
-        argument to the <strong>useSlice</strong> hook.
-      </P>
+        argument to the **`useSlice`** hook.
+      </ReactMarkdown>
       <CodeBlock>{`// slices.js
 import getHookAndProviderFromSlices from "react-context-slices";
 
@@ -166,6 +169,26 @@ const App = () => {
 };
 
 export default App;`}</CodeBlock>
+      <ReactMarkdown>
+        Finally, if we want all to work as expected, we must use the
+        **`Provider`** up in the tree:
+      </ReactMarkdown>
+      <CodeBlock>{`import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { Provider } from "./slices";
+import App from "./app";
+
+const container = document.getElementById("root");
+
+if (container !== null) {
+  createRoot(container).render(
+    <StrictMode>
+      <Provider>
+        <App />
+      </Provider>
+    </StrictMode>
+  );
+}`}</CodeBlock>
     </Container>
   );
 };
