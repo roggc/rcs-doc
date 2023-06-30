@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+p {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
