@@ -22,6 +22,8 @@ import NoteOnTesting from "./note-on-testing";
 import ApiReference from "./api-reference";
 import License from "./license";
 import Installation from "./installation";
+import { ThemeProvider } from "styled-components";
+import theme from "./theme";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -55,7 +57,9 @@ if (container !== null) {
     <StrictMode>
       <Provider>
         <IconContext.Provider value={{ size: "2em" }}>
-          <RouterProvider router={router} />
+          <ThemeProvider theme={theme}>
+            <RouterProvider router={router} />
+          </ThemeProvider>
         </IconContext.Provider>
       </Provider>
     </StrictMode>

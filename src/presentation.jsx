@@ -71,10 +71,10 @@ const Title = styled.div`
 const P = styled.div``;
 
 const FaReact = styled(FR)`
-  color: blue;
+  color: ${({ theme }) => theme.colors.blue};
 `;
 const SiRedux = styled(SR)`
-  color: blue;
+  color: ${({ theme }) => theme.colors.blue};
 `;
 
 export default Presentation;

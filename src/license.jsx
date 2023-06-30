@@ -41,6 +41,7 @@ const CodeBlock = styled(CB)`
 const P = styled.div``;
 const A = styled.a`
   text-decoration: none;
+  color: ${({ theme }) => theme.colors.red};
 `;
 
 export default License;

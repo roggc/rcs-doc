@@ -160,12 +160,12 @@ const MobileLateralMenu = styled(({ isShown, ...props }) => <div {...props} />)`
   top: 0;
   bottom: 0;
   ${({ isShown }) => (isShown ? `left:0;` : `left:calc(-40% - 40px);`)}
-  border-right: 2px solid red;
+  border-right: 2px solid ${({ theme }) => theme.colors.red};
   padding: 20px 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.white};
   max-width: 40%;
   overflow: auto;
   box-sizing: border-box;
@@ -213,10 +213,7 @@ const HeaderContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 20px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 9;
-  background-color: white;
+  border-bottom: 2px solid ${({ theme }) => theme.colors.red};
 `;
 
 const HeaderLeftContainer = styled.div`
@@ -250,7 +247,7 @@ const MobilePageContent = styled.div`
 const LateralMenu = styled.div`
   flex: 28%;
   overflow: auto;
-  border-right: 2px solid red;
+  border-right: 2px solid ${({ theme }) => theme.colors.red};
   padding: 20px 20px;
   display: flex;
   flex-direction: column;
@@ -266,7 +263,7 @@ const PageContent = styled.div`
 const Link = styled(L)`
   text-decoration: none;
   display: block;
-  color: initial;
+  color: inherit;
 `;
 
 const Title = styled(Link)`
@@ -278,7 +275,7 @@ const FaGithub = styled(FaGH)`
 `;
 const FaNpm = styled(FaNPM)`
   cursor: pointer;
-  color: red;
+  color: ${({ theme }) => theme.colors.red};
 `;
 
 const IconsContainer = styled.div`

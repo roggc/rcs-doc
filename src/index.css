@@ -2,6 +2,8 @@ body {
   margin: 0;
   font-family: sans-serif;
   line-height: 1.5;
+  color: #353935;
+  background-color: #faf9f6;
 }
 
 p {
@@ -10,8 +12,8 @@ p {
 }
 
 .active.navlink {
-  background-color: grey;
+  background-color: rgba(31, 81, 255, 0.6);
   border-radius: 5px;
   padding: 10px;
-  color: white;
+  color: #faf9f6;
 }
