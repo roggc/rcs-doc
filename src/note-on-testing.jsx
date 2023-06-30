@@ -25,8 +25,8 @@ module.exports = {
 module.exports = {
   transformIgnorePatterns: [
     "/node_modules/(?!(react-context-slices|@react-native|react-native)/)",
-    // rest of configuration settings
   ],
+  // rest of configuration settings
 };`}</CodeBlock>
       <ReactMarkdown>
         Essentially what this tells is to not parse the `node_modules` folder
