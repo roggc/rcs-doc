@@ -8,3 +8,11 @@ p {
   margin-block-start: 0em;
   margin-block-end: 0em;
 }
+
+.active.navlink {
+  display: block;
+  background-color: grey;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+}

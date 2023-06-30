@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { FaGithub as FaGH, FaNpm as FaNPM } from "react-icons/fa";
 import CB from "./code-block";
-import { Outlet, Link as L } from "react-router-dom";
+import { Outlet, NavLink as L } from "react-router-dom";
 import { openInNewTab } from "./utils";
 import { useMediaQuery } from "react-responsive";
 import { FiMenu as FM } from "react-icons/fi";
@@ -28,25 +28,39 @@ const Layout = () => {
             }
           />
         </IconsContainer>
-        <Link to="installation">Installation</Link>
-        <Link to="how-to-use-it-javascript">How to use it (javascript)</Link>
-        <Link to="how-to-use-it-typescript">How to use it (typescript)</Link>
-        <Link to="get-initial-state-from-storage">
+        <Link to="installation" className="navlink">
+          Installation
+        </Link>
+        <Link to="how-to-use-it-javascript" className="navlink">
+          How to use it (javascript)
+        </Link>
+        <Link to="how-to-use-it-typescript" className="navlink">
+          How to use it (typescript)
+        </Link>
+        <Link to="get-initial-state-from-storage" className="navlink">
           Get initial state from storage (React Context slices)
         </Link>
-        <Link to="define-middleware">
+        <Link to="define-middleware" className="navlink">
           Define middleware (React Context slices)
         </Link>
-        <Link to="pass-options-to-redux-store">
+        <Link to="pass-options-to-redux-store" className="navlink">
           Pass options to Redux store
         </Link>
-        <Link to="things-you-can-do">Things you can do</Link>
-        <Link to="note-on-nomenclature">
+        <Link to="things-you-can-do" className="navlink">
+          Things you can do
+        </Link>
+        <Link to="note-on-nomenclature" className="navlink">
           A note on nomenclature (React Context slices)
         </Link>
-        <Link to="note-on-testing">A note on testing</Link>
-        <Link to="api-reference">API reference</Link>
-        <Link to="license">License</Link>
+        <Link to="note-on-testing" className="navlink">
+          A note on testing
+        </Link>
+        <Link to="api-reference" className="navlink">
+          API reference
+        </Link>
+        <Link to="license" className="navlink">
+          License
+        </Link>
       </LateralMenu>
       <PageContent>
         <Outlet />
@@ -60,64 +74,78 @@ const Layout = () => {
           <Link
             to="installation"
             onClick={() => setIsShownMobileLateralMenu(false)}
+            className="navlink"
           >
             Installation
           </Link>
           <Link
             to="how-to-use-it-javascript"
             onClick={() => setIsShownMobileLateralMenu(false)}
+            className="navlink"
           >
             How to use it (javascript)
           </Link>
           <Link
             to="how-to-use-it-typescript"
             onClick={() => setIsShownMobileLateralMenu(false)}
+            className="navlink"
           >
             How to use it (typescript)
           </Link>
           <Link
             to="get-initial-state-from-storage"
             onClick={() => setIsShownMobileLateralMenu(false)}
+            className="navlink"
           >
             Get initial state from storage (React Context slices)
           </Link>
           <Link
             to="define-middleware"
             onClick={() => setIsShownMobileLateralMenu(false)}
+            className="navlink"
           >
             Define middleware (React Context slices)
           </Link>
           <Link
             to="pass-options-to-redux-store"
             onClick={() => setIsShownMobileLateralMenu(false)}
+            className="navlink"
           >
             Pass options to Redux store
           </Link>
           <Link
             to="things-you-can-do"
             onClick={() => setIsShownMobileLateralMenu(false)}
+            className="navlink"
           >
             Things you can do
           </Link>
           <Link
             to="note-on-nomenclature"
             onClick={() => setIsShownMobileLateralMenu(false)}
+            className="navlink"
           >
             A note on nomenclature (React Context slices)
           </Link>
           <Link
             to="note-on-testing"
             onClick={() => setIsShownMobileLateralMenu(false)}
+            className="navlink"
           >
             A note on testing
           </Link>
           <Link
             to="api-reference"
             onClick={() => setIsShownMobileLateralMenu(false)}
+            className="navlink"
           >
             API reference
           </Link>
-          <Link to="license" onClick={() => setIsShownMobileLateralMenu(false)}>
+          <Link
+            to="license"
+            onClick={() => setIsShownMobileLateralMenu(false)}
+            className="navlink"
+          >
             License
           </Link>
         </MobileLateralMenu>
@@ -131,14 +159,14 @@ const MobileLateralMenu = styled(({ isShown, ...props }) => <div {...props} />)`
   position: absolute;
   top: 0;
   bottom: 0;
-  ${({ isShown }) => (isShown ? `left:0;` : `left:calc(-30% - 40px);`)}
+  ${({ isShown }) => (isShown ? `left:0;` : `left:calc(-40% - 40px);`)}
   border-right: 2px solid red;
   padding: 20px 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   background-color: white;
-  max-width: 30%;
+  max-width: 40%;
   overflow: auto;
   box-sizing: border-box;
   transition: left 1s;
