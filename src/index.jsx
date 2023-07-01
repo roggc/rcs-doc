@@ -24,6 +24,13 @@ import License from "./license";
 import Installation from "./installation";
 import { ThemeProvider } from "styled-components";
 import theme from "./theme";
+import favicon from "../public/favicon.ico";
+import webmanifest from "../public/site.webmanifest";
+import favicon_32_32 from "../public/favicon-32x32.png";
+import favicon_16_16 from "../public/favicon-16x16.png";
+import apple_touch_icon from "../public/apple-touch-icon.png";
+import android_chrome_512_512 from "../public/android-chrome-512x512.png";
+import android_chrome_192_192 from "../public/android-chrome-192x192.png";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
