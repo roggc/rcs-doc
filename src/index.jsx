@@ -6,7 +6,7 @@ import HowToUseItJS from "@src/how-to-use-it-js";
 import "@src/index.css";
 import { IconContext } from "react-icons";
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
   createRoutesFromElements,
   Route,
@@ -32,7 +32,7 @@ import apple_touch_icon from "../public/apple-touch-icon.png";
 import android_chrome_512_512 from "../public/android-chrome-512x512.png";
 import android_chrome_192_192 from "../public/android-chrome-192x192.png";
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route element={<Presentation />} index />
