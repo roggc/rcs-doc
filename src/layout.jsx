@@ -187,6 +187,9 @@ const MobileLateralMenu = styled(({ isShown, ...props }) => <div {...props} />)`
 
 const AppContainer = styled.div`
   height: 100vh;
+  max-height: fill-available;
+  max-height: -webkit-fill-available;
+  max-height: -moz-fill-available;
   display: flex;
 `;
 
