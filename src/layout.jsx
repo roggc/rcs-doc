@@ -172,14 +172,14 @@ const MobileLateralMenu = styled(({ isShown, ...props }) => <div {...props} />)`
   position: absolute;
   top: 0;
   bottom: 0;
-  ${({ isShown }) => (isShown ? `left:0;` : `left:calc(-40% - 40px);`)}
+  ${({ isShown }) => (isShown ? `left:0;` : `left:calc(-60% - 40px);`)}
   border-right: 2px solid ${({ theme }) => theme.colors.red};
   padding: 20px 20px;
   display: flex;
   flex-direction: column;
   gap: 5px;
   background-color: ${({ theme }) => theme.colors.white};
-  max-width: 40%;
+  max-width: 60%;
   overflow: auto;
   box-sizing: border-box;
   transition: left 1s;
@@ -231,6 +231,7 @@ const HeaderContainer = styled.div`
   justify-content: space-between;
   padding: 20px 20px;
   border-bottom: 2px solid ${({ theme }) => theme.colors.red};
+  overflow: auto;
 `;
 
 const HeaderLeftContainer = styled.div`
