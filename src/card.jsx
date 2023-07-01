@@ -9,7 +9,7 @@ const CardContainer = styled.div`
   box-shadow: 0 0 3px 1px;
   padding: 20px;
   margin-bottom: 3px;
-  max-width: calc(86%);
+  max-width: calc(100% - 46px);
   display: flex;
   flex-direction: column;
   gap: 20px;

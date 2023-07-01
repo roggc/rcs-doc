@@ -1,5 +1,10 @@
 import styled from "styled-components";
-import { FaGithub as FaGH, FaNpm as FaNPM } from "react-icons/fa";
+import {
+  FaGithub as FaGH,
+  FaNpm as FaNPM,
+  FaReact as FR,
+} from "react-icons/fa";
+import { SiRedux as SR } from "react-icons/si";
 import CB from "./code-block";
 import { Outlet, NavLink as L } from "react-router-dom";
 import { openInNewTab } from "./utils";
@@ -19,7 +24,11 @@ const Layout = () => {
   return isDesktopOrTablet ? (
     <AppContainer>
       <LateralMenu>
-        <Title to="/">react-context-slices</Title>
+        <TitleContainer>
+          <FaReact />
+          <SiRedux />
+          <Title to="/">react-context-slices</Title>
+        </TitleContainer>
         <IconsContainer>
           <FaGithub
             onClick={() =>
@@ -249,7 +258,7 @@ const MobilePageContent = styled.div`
 `;
 
 const LateralMenu = styled.div`
-  flex: 28%;
+  flex: 36%;
   overflow: auto;
   border-right: 2px solid ${({ theme }) => theme.colors.red};
   padding: 20px 20px;
@@ -258,8 +267,14 @@ const LateralMenu = styled.div`
   gap: 5px;
 `;
 
+const TitleContainer = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 10px;
+`;
+
 const PageContent = styled.div`
-  flex: 75%;
+  flex: 100%;
   overflow: auto;
   padding: 20px 20px;
 `;
@@ -287,6 +302,15 @@ const FaNpm = styled(FaNPM)`
 const IconsContainer = styled.div`
   display: flex;
   gap: 20px;
+  padding: 10px;
+`;
+
+const FaReact = styled(FR)`
+  color: ${({ theme }) => theme.colors.blue};
+`;
+
+const SiRedux = styled(SR)`
+  color: ${({ theme }) => theme.colors.blue};
 `;
 
 export default Layout;

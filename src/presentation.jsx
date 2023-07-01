@@ -1,5 +1,5 @@
-import { FaReact as FR } from "react-icons/fa";
-import { SiRedux as SR } from "react-icons/si";
+// import { FaReact as FR } from "react-icons/fa";
+// import { SiRedux as SR } from "react-icons/si";
 import styled from "styled-components";
 import Card from "./card";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
@@ -10,10 +10,6 @@ const Presentation = () => {
   return (
     <PresentationContainer onClick={() => setIsShownMobileLateralMenu(false)}>
       <Title>react-context-slices</Title>
-      <IconsContainer>
-        <FaReact />
-        <SiRedux />
-      </IconsContainer>
       <Card>
         <ReactMarkdown>
           **`react-context-slices`** offers a unique solution to global state
@@ -59,10 +55,11 @@ const PresentationContainer = styled.div`
   flex: 1;
 `;
 
-const IconsContainer = styled.div`
-  display: flex;
-  gap: 20px;
-`;
+// const TitleContainer = styled.div`
+//   display: flex;
+//   gap: 3px;
+//   align-items: center;
+// `;
 
 const Title = styled.div`
   font-size: 2em;
@@ -70,11 +67,11 @@ const Title = styled.div`
 
 const P = styled.div``;
 
-const FaReact = styled(FR)`
-  color: ${({ theme }) => theme.colors.blue};
-`;
-const SiRedux = styled(SR)`
-  color: ${({ theme }) => theme.colors.blue};
-`;
+// const FaReact = styled(FR)`
+//   color: ${({ theme }) => theme.colors.blue};
+// `;
+// const SiRedux = styled(SR)`
+//   color: ${({ theme }) => theme.colors.blue};
+// `;
 
 export default Presentation;
