@@ -1,11 +1,18 @@
 import styled from "styled-components";
 import CB from "./code-block";
 import { useSlice } from "@slices";
+import { LuConstruction } from "react-icons/lu";
 
 const ApiReference = () => {
   const [, setIsShownMobileLateralMenu] = useSlice("isShownMobileLateralMenu");
   return (
-    <Container onClick={() => setIsShownMobileLateralMenu(false)}></Container>
+    <Container onClick={() => setIsShownMobileLateralMenu(false)}>
+      <Row>
+        <LuConstruction />
+        <P>Under construction</P>
+        <LuConstruction />
+      </Row>
+    </Container>
   );
 };
 
@@ -24,5 +31,11 @@ const CodeBlock = styled(CB)`
 `;
 
 const P = styled.div``;
+
+const Row = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+`;
 
 export default ApiReference;
