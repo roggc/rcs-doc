@@ -201,6 +201,10 @@ const Header = () => {
       <HeaderLeftContainer>
         <FiMenu onClick={() => setIsShownMobileLateralMenu((v) => !v)} />
         <HeaderTitle onClick={() => setIsShownMobileLateralMenu(false)}>
+          <SecondIconsContainer>
+            <FaReact />
+            <SiRedux />
+          </SecondIconsContainer>
           <Link to="/">react-context-slices</Link>
         </HeaderTitle>
       </HeaderLeftContainer>
@@ -243,10 +247,19 @@ const HeaderRightContainer = styled.div`
 
 const HeaderTitle = styled.div`
   font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+`;
+
+const SecondIconsContainer = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 const FiMenu = styled(FM)`
   cursor: pointer;
+  color: ${({ theme }) => theme.colors.red};
 `;
 
 const MobilePageContent = styled.div`
