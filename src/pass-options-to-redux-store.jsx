@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import CB from "./code-block";
-import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+import ReactMarkdown from "./react-markdown";
 import { useSlice } from "@slices";
 
 const PassOptionsToReduxStore = () => {
@@ -10,8 +10,8 @@ const PassOptionsToReduxStore = () => {
       <ReactMarkdown>
         You can pass options to the Redux store, those defined by the
         documentation in Redux Toolkit about the parameters accepted by the
-        `configureStore` method, except `reducers`. Look at the documentation
-        there to know what are these options.
+        *`configureStore`* method, except *`reducers`*. Look at the
+        documentation there to know what are these options.
       </ReactMarkdown>
       <CodeBlock>{`import getHookAndProviderFromSlices from "react-context-slices";
 

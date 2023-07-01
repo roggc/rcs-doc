@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import CB from "./code-block";
-import { ReactMarkdown as RM } from "react-markdown/lib/react-markdown";
+import ReactMarkdown from "./react-markdown";
 import { useSlice } from "@slices";
 
 const NoteOnTesting = () => {
@@ -9,8 +9,8 @@ const NoteOnTesting = () => {
     <Container onClick={() => setIsShownMobileLateralMenu(false)}>
       <ReactMarkdown>
         If you want to write unit tests while using the library, you must
-        exclude `react-context-slices` from `transformIgnorePatterns` in `jest`
-        configuration file:
+        exclude *`react-context-slices`* from *`transformIgnorePatterns`* in
+        *`jest`* configuration file:
       </ReactMarkdown>
       <CodeBlock>{`// jest.config.js
 module.exports = {
@@ -18,8 +18,8 @@ module.exports = {
   // rest of configuration settings
 };`}</CodeBlock>
       <ReactMarkdown>
-        On React Native you should also exclude `react-native` from the list of
-        `transformIgnorePatterns`:
+        On React Native you should also exclude *`react-native`* from the list
+        of *`transformIgnorePatterns`*:
       </ReactMarkdown>
       <CodeBlock>{`// jest.config.js
 module.exports = {
@@ -29,10 +29,10 @@ module.exports = {
   // rest of configuration settings
 };`}</CodeBlock>
       <ReactMarkdown>
-        Essentially what this tells is to not parse the `node_modules` folder
-        except for `react-context-slices`. This is so because
-        `react-context-slices` has `import` statements in it, and need to be
-        parsed by `tsc` or `babel` when using `jest`.
+        Essentially what this tells is to not parse the *`node_modules`* folder
+        except for *`react-context-slices`*. This is so because
+        *`react-context-slices`* has *`import`* statements in it, and need to be
+        parsed by *`tsc`* or *`babel`* when using *`jest`*.
       </ReactMarkdown>
     </Container>
   );
@@ -53,9 +53,5 @@ const CodeBlock = styled(CB)`
 `;
 
 const P = styled.div``;
-
-const ReactMarkdown = styled(RM)`
-  line-height: 1.5;
-`;
 
 export default NoteOnTesting;

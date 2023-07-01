@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import CB from "./code-block";
 import { useSlice } from "@slices";
+import ReactMarkdown from "./react-markdown";
 
 const HowToUseItTS = () => {
   const [, setIsShownMobileLateralMenu] = useSlice("isShownMobileLateralMenu");
@@ -23,10 +24,9 @@ export const { useSlice, Provider } = getHookAndProviderFromSlices({
     // rest of slices (either Redux or React Context slices)
   },
 });`}</CodeBlock>
-      <P>
-        And then use it in your component with the <strong>useSlice</strong>{" "}
-        hook like this.
-      </P>
+      <ReactMarkdown>
+        And then use it in your component with the *`useSlice`* hook like this.
+      </ReactMarkdown>
       <CodeBlock language="typescript">{`import { useSlice } from "./slices";
 
 const App = () => {
@@ -94,7 +94,9 @@ const App = () => {
 };
 
 export default App;`}</CodeBlock>
-      <P>For a Redux slice that uses a selector you do it like this.</P>
+      <ReactMarkdown>
+        For a Redux slice that uses a **selector** you do it like this.
+      </ReactMarkdown>
       <CodeBlock language="typescript">{`import getHookAndProviderFromSlices, {
   defineSlice,
 } from "react-context-slices";

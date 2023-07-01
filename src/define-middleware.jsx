@@ -1,15 +1,16 @@
 import styled from "styled-components";
 import CB from "./code-block";
 import { useSlice } from "@slices";
+import ReactMarkdown from "./react-markdown";
 
 const DefineMiddleware = () => {
   const [, setIsShownMobileLateralMenu] = useSlice("isShownMobileLateralMenu");
   return (
     <Container onClick={() => setIsShownMobileLateralMenu(false)}>
-      <P>
-        For React Context slices, you can define middleware in a per-slice basis
-        to intercept and customise action workflows.
-      </P>
+      <ReactMarkdown>
+        For React Context slices, you can define **middleware** in a per-slice
+        basis to intercept and customise action workflows.
+      </ReactMarkdown>
       <CodeBlock>{`// slices.js
 import getHookAndProviderFromSlices from "react-context-slices";
 
