@@ -123,7 +123,7 @@ const App = () => {
 
 export default App;`}</CodeBlock>
       <ReactMarkdown>
-        When using Redux slices, we can also pass a selector as a second
+        When using Redux slices, we can also pass a **selector** as a second
         argument to the *`useSlice`* hook.
       </ReactMarkdown>
       <CodeBlock>{`// slices.js
