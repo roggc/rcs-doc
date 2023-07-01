@@ -168,7 +168,7 @@ const MobileLateralMenu = styled(({ isShown, ...props }) => <div {...props} />)`
   padding: 20px 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 5px;
   background-color: ${({ theme }) => theme.colors.white};
   max-width: 40%;
   overflow: auto;
@@ -255,7 +255,7 @@ const LateralMenu = styled.div`
   padding: 20px 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 5px;
 `;
 
 const PageContent = styled.div`
@@ -268,6 +268,8 @@ const Link = styled(L)`
   text-decoration: none;
   display: block;
   color: inherit;
+  padding: 10px;
+  border: 2px solid ${({ theme }) => theme.colors.white};
 `;
 
 const Title = styled(Link)`
